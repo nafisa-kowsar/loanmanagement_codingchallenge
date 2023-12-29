@@ -115,7 +115,7 @@ public class ILoanRepositoryImpl implements ILoanRepository{
 	    }
 
 	    @Override
-	    public List<Loan> getAllLoans() {
+	    public List<Loan> getAllLoans() throws InvalidLoanException{
 	    	List<Loan> loans = new ArrayList<>();
 
 	        try {

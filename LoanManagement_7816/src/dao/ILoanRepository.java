@@ -12,7 +12,7 @@ public interface ILoanRepository {
     double calculateEMI(int loanId) throws InvalidLoanException;
     double calculateEMI(int loanId, double principalAmount, double interestRate, int loanTerm) throws InvalidLoanException;
     void loanRepayment(int loanId, double amount) throws InvalidLoanException;
-    List<Loan> getAllLoans();
+    List<Loan> getAllLoans() throws InvalidLoanException;
     Loan getLoanById(int loanId) throws InvalidLoanException;
     void applyLoan(Loan loan) throws InvalidLoanException;
     int getGeneratedLoanId() throws InvalidLoanException;
